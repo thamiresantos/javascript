@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro?</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color:rgb(200, 224, 168);
+            color: #000;
+            text-align: center;
+            padding: 10px;
+        }
+        p{
+          
+        }
+
+    
+    </style>
+</head>
+<body>
+    <h1>Descubra se você é Brasileiro ou Estrangeiro!</h1>
+   <p>
+       Qual país você nasceu? <input type="text" name="txt" id="txt">
+        <input type="button" value="verificar" onclick="descobrir()">
+   </p>
+    <div id="res"> </div>
+
+    <script>
+        function descobrir(){
+            var txt = window.document.getElementById('txt')
+            var res = window.document.getElementById('res')
+            nasceu = String(txt.value)
+            res.innerHTML = `<p>O país no qual você nasceu se chamar <strong>${nasceu}</strong>!</p>`
+            if (nasceu == 'Brasil') {
+                res.innerHTML += `<p><strong>Parabéns!</strong> você é <strong>Brasileiro(a)</strong>!</p>` 
+            } else {
+                res.innerHTML += `<p><strong>Parabéns!</strong> Você é <strong>Estrangeiro(a)</strong>!</p>`
+            }
+        }
+
+    </script>
+</body>
+</html>
