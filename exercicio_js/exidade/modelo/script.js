@@ -32,7 +32,7 @@ function verificar() {
 
        } else if (gênerofem.checked){
         var gênero = 'Mulher'
-        document.body.style.background ='#BA55D3'
+        document.body.style.background ='#BA55D'
         if(idade >=0 && idade <12){
             //criança
             img.setAttribute('src', 'foto-criança-f.png')
